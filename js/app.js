@@ -11,8 +11,17 @@
 //   console.log('File written!');
 // }
 
+function sendEmail() {
+  const nodemailer = require("nodemailer");
 
-function sendEmail() {  
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'fentanesink@gmail.com',
+      pass: 'micv hrod wafc ghqz'
+    }
+  });
+
   const mailOptions = {
     from: 'fentanesink@gmail.com',
     to: 'rodrigo.fentanes@hotmail.com',
