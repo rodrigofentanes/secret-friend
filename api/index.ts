@@ -1,3 +1,18 @@
+/* BLOCO
+
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => res.send("Express on Vercel"));
+
+app.listen(3000, () => console.log("Server ready on port 3000."));
+
+module.exports = app;
+
+*/
+
+/* BLOCO
+
 const nodemailer = require("nodemailer");
 
 const transporter = nodemailer.createTransport({
@@ -8,14 +23,19 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-module.exports = transporter;
+const mailOptions = {
+  from: 'fentanesink@gmail.com',
+  to: 'rodrigo.fentanes@hotmail.com',
+  subject: 'Sending Email using Node.js',
+  text: 'That was easy!'
+};
 
-// const express = require("express");
-// const app = express();
+transporter.sendMail(mailOptions, function(error, info) {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+});
 
-// app.get("/", (req, res) => res.send("Express on Vercel"));
-
-// app.listen(3000, () => console.log("Server ready on port 3000."));
-
-// module.exports = app;
-
+*/
