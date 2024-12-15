@@ -11,22 +11,22 @@
 //   console.log('File written!');
 // }
 
-const nodemailer = require("nodemailer");
+// const nodemailer = require("nodemailer");
 
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'fentanesink@gmail.com',
-    pass: 'micv hrod wafc ghqz'
-  }
-});
+// const transporter = nodemailer.createTransport({
+//   service: 'gmail',
+//   auth: {
+//     user: 'fentanesink@gmail.com',
+//     pass: 'micv hrod wafc ghqz'
+//   }
+// });
 
-const mailOptions = {
-  from: 'fentanesink@gmail.com',
-  to: 'rodrigo.fentanes@hotmail.com',
-  subject: 'Sending Email using Node.js',
-  text: 'That was easy!'
-};
+// const mailOptions = {
+//   from: 'fentanesink@gmail.com',
+//   to: 'rodrigo.fentanes@hotmail.com',
+//   subject: 'Sending Email using Node.js',
+//   text: 'That was easy!'
+// };
 
 function sendEmail() {
   transporter.sendMail(mailOptions, function(error, info) {

@@ -1,12 +1,3 @@
-const express = require("express");
-const app = express();
-
-app.get("/", (req, res) => res.send("Express on Vercel"));
-
-app.listen(3000, () => console.log("Server ready on port 3000."));
-
-module.exports = app;
-
 const nodemailer = require("nodemailer");
 
 const transporter = nodemailer.createTransport({
@@ -24,12 +15,12 @@ const mailOptions = {
   text: 'That was easy!'
 };
 
-function sendEmail() {
-  transporter.sendMail(mailOptions, function(error, info) {
-    if (error) {
-      console.log(error);
-    } else {
-      console.log('Email sent: ' + info.response);
-    }
-  });
-}
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => res.send("Express on Vercel"));
+
+app.listen(3000, () => console.log("Server ready on port 3000."));
+
+module.exports = app;
+
