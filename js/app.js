@@ -11,9 +11,9 @@
 //   console.log('File written!');
 // }
 
-var nodemailer = require('nodemailer');
+const nodemailer = require('nodemailer');
 
-var transporter = nodemailer.createTransport({
+const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'fentanesink@gmail.com',
@@ -21,7 +21,7 @@ var transporter = nodemailer.createTransport({
   }
 });
 
-var mailOptions = {
+const mailOptions = {
   from: 'fentanesink@gmail.com',
   to: 'rodrigo.fentanes@hotmail.com',
   subject: 'Sending Email using Node.js',
