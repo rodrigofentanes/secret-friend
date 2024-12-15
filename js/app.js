@@ -12,15 +12,7 @@
 // }
 
 
-function sendEmail() {
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: 'fentanesink@gmail.com',
-      pass: 'micv hrod wafc ghqz'
-    }
-  });
-  
+function sendEmail() {  
   const mailOptions = {
     from: 'fentanesink@gmail.com',
     to: 'rodrigo.fentanes@hotmail.com',
